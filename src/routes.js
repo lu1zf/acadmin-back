@@ -1,9 +1,11 @@
 ﻿import { Router } from 'express';
 
+import StudentController from './app/controllers/StudentController';
+import SessionController from './app/controllers/SessionController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => {
-  return res.json({ message: 'servidor iniciado com sucesso!' });
-});
+routes.post('/users', StudentController.store);
+routes.post('/sessions', SessionController.store);
 
 export default routes;
