@@ -1,6 +1,12 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable('students', {
+      id: {
+        type: Sequelize.INTEGER,
+        alowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+      },
       name: {
         type: Sequelize.STRING,
         alowNull: false,
@@ -20,6 +26,14 @@ module.exports = {
       },
       height: {
         type: Sequelize.DOUBLE(1, 2),
+        alowNull: false,
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        alowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
         alowNull: false,
       },
     });
