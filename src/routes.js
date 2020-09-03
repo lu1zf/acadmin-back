@@ -14,6 +14,6 @@ routes.use(authMiddleware);
 // (inserir token de autenticação no auth bearer com o token gerado na sessão)
 
 routes.post('/users', StudentController.store);
-routes.put('/users', StudentController.update);
+routes.put('/users/:id', StudentController.update);
 
 export default routes;
