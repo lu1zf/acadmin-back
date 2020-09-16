@@ -1,0 +1,19 @@
+module.exports = {
+  up: async (QueryInterface) => {
+    return QueryInterface.bulkInsert(
+      'plans',
+      [
+        {
+          title: 'Start',
+          duration: 1,
+          price: 129,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+      ],
+      {}
+    );
+  },
+
+  down: async () => {},
+};
